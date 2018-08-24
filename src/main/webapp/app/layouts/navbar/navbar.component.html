@@ -7,8 +7,7 @@
         </a>
         <a class="navbar-brand logo float-left" routerLink="/" (click)="collapseNavbar()">
             <span class="logo-img"></span>
-            <span jhiTranslate="global.title" class="navbar-title">HRApp</span> <span
-            class="navbar-version">{{version}}</span>
+            <span jhiTranslate="global.title" class="navbar-title">HRApp</span>
         </a>
     </div>
     <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed"
@@ -32,16 +31,40 @@
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu>
                     <li>
-                        <a class="dropdown-item" routerLink="estimation"
+                        <a class="dropdown-item" routerLink="admin/estimations-overview"
                            routerLinkActive="active" (click)="collapseNavbar()">
                             <fa-icon [icon]="'user'"></fa-icon>
-                            <span>Estimation</span>
+                            <span>Estimations overview</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" routerLink="admin/estimation"
+                           routerLinkActive="active" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'user'"></fa-icon>
+                            <span>Create estimation</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="admin/evaluator"
+                           routerLinkActive="active" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'user'"></fa-icon>
+                            <span>Employees</span>
                         </a>
                     </li>
                 </ul>
             </li>
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                <a class="nav-link" routerLink="admin/evaluatee" (click)="collapseNavbar()">
+                    <span>
+                        <fa-icon [icon]="'user'"></fa-icon>
+                        <span>Evaluatee estimation</span>
+                    </span>
+                </a>
+            </li>
+
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-            <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active"
+ <!--           <li *ngSwitchCase="true" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active"
                 [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
                     <span>
@@ -52,9 +75,9 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu>
-                    <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+                    &lt;!&ndash; jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here &ndash;&gt;
                 </ul>
-            </li>
+            </li>-->
             <li *jhiHasAnyAuthority="'ROLE_ADMIN'" ngbDropdown class="nav-item dropdown pointer"
                 routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="admin-menu">

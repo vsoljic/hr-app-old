@@ -130,5 +130,5 @@
         "idexists": "Novi {{ entityName }} ne može sadržati ID",
         "idnull": "Invalid ID"
     },
-    "footer": "© HRApp by Vedrana"
+    "footer": "© HRApp"
 }

@@ -133,5 +133,5 @@
         "idexists": "A new {{ entityName }} cannot already have an ID",
         "idnull": "Invalid ID"
     },
-    "footer": "© HRApp by Vedrana"
+    "footer": "© HRApp"
 }

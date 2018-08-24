@@ -6,10 +6,11 @@ import { NgJhipsterModule } from 'ng-jhipster';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CookieModule } from 'ngx-cookie';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
     imports: [
-        NgbModule.forRoot(),
+        NgbModule,
         NgJhipsterModule.forRoot({
             // set below to true to make alerts look like toast
             alertAsToast: false,
@@ -20,6 +21,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         CookieModule.forRoot(),
         FontAwesomeModule
     ],
-    exports: [FormsModule, CommonModule, NgbModule, NgJhipsterModule, InfiniteScrollModule, FontAwesomeModule]
+    exports: [FormsModule, CommonModule, NgbModule, NgJhipsterModule, InfiniteScrollModule, FontAwesomeModule, NgSelectModule]
 })
 export class HrAppSharedLibsModule {}
